@@ -5,6 +5,7 @@ exports.up = function (knex) {
         commitNftBidsTable.increments("bid_id").primary()
         commitNftBidsTable.string("committer_username")
         commitNftBidsTable.string("commit_url")
+        commitNftBidsTable.string("commit_message")
         commitNftBidsTable.string("commit_sha")
         commitNftBidsTable.bigInteger("time_requested")
         commitNftBidsTable.string("supporter_wallet_address")
