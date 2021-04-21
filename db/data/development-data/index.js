@@ -1,1 +1,1 @@
-exports.commitNftBidsData = require('./commit-nft-bids')
+exports.commitNftOffersData = require('./commit-nft-offers')

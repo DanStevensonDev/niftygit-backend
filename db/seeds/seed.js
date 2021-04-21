@@ -1,4 +1,4 @@
-const { commitNftBidsData } = require("../data/index.js")
+const { commitNftOffersData } = require("../data/index.js")
 
 exports.seed = function (knex) {
     return knex.migrate
@@ -6,8 +6,8 @@ exports.seed = function (knex) {
         .then(() => knex.migrate.latest())
         .then(() => {
             return knex
-                .insert(commitNftBidsData)
-                .into("commit_nft_bids")
+                .insert(commitNftOffersData)
+                .into("commit_nft_offers")
                 .returning("*")
         })
 }

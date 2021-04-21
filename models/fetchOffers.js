@@ -1,13 +1,13 @@
 const dbConnection = require('../db/dbConnection')
 
-exports.fetchBids = (committer, ref) => {
-    return dbConnection("commit_nft_bids")
+exports.fetchOffers = (committer, ref) => {
+    return dbConnection("commit_nft_offers")
         .select("*")
         .modify((querySoFar) => {
             if (committer !== undefined) {
                 querySoFar
                     .select("*")
-                    .where("commit_nft_bids.committer_username", committer)
+                    .where("commit_nft_offers.committerUsername", committer)
             }
 
             if (ref !== undefined) {

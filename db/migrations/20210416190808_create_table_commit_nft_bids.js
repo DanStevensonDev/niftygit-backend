@@ -1,17 +1,17 @@
 
 exports.up = function (knex) {
-    console.log("creating table...")
-    return knex.schema.createTable("commit_nft_bids", commitNftBidsTable => {
-        commitNftBidsTable.increments("offerId").primary()
-        commitNftBidsTable.string("committerUsername").notNullable()
-        commitNftBidsTable.string("committerData").notNullable()
-        commitNftBidsTable.float("offerAmountInEth").notNullable()
-        commitNftBidsTable.bigInteger("transactionTime").notNullable()
-        commitNftBidsTable.string("transactionHash").notNullable()
-        commitNftBidsTable.string("supporterAccountAddress").notNullable()
-    })
+    // console.log("creating table...")
+    // return knex.schema.createTable("commit_nft_offers", commitNftOffersTable => {
+    //     commitNftOffersTable.increments("offerId").primary()
+    //     commitNftOffersTable.string("committerUsername").notNullable()
+    //     commitNftOffersTable.string("committerData").notNullable()
+    //     commitNftOffersTable.float("offerAmountInEth").notNullable()
+    //     commitNftOffersTable.bigInteger("transactionTime").notNullable()
+    //     commitNftOffersTable.string("transactionHash").notNullable()
+    //     commitNftOffersTable.string("supporterAccountAddress").notNullable()
+    // })
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable("commit_nft_bids")
+  // return knex.schema.dropTableIfExists("commit_nft_offers")
 };

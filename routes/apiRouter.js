@@ -1,6 +1,6 @@
 const apiRouter = require('express').Router()
-const bidsRouter = require('./bidsRouter')
+const offersRouter = require('./offersRouter')
 
-apiRouter.use('/bids', bidsRouter)
+apiRouter.use('/offers', offersRouter)
 
 module.exports = apiRouter
