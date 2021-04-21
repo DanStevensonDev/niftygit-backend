@@ -2,16 +2,13 @@
 exports.up = function (knex) {
     console.log("creating table...")
     return knex.schema.createTable("commit_nft_bids", commitNftBidsTable => {
-        commitNftBidsTable.increments("bid_id").primary()
-        commitNftBidsTable.string("committer_username")
-        commitNftBidsTable.string("commit_url")
-        commitNftBidsTable.string("commit_message")
-        commitNftBidsTable.string("commit_sha")
-        commitNftBidsTable.bigInteger("time_requested")
-        commitNftBidsTable.string("supporter_wallet_address")
-        commitNftBidsTable.float("support_amount_in_ether")
-        commitNftBidsTable.string("transaction_hash")
-        commitNftBidsTable.boolean("previously_sold")
+        commitNftBidsTable.increments("offerId").primary()
+        commitNftBidsTable.string("committerUsername").notNullable()
+        commitNftBidsTable.string("committerData").notNullable()
+        commitNftBidsTable.float("offerAmountInEth").notNullable()
+        commitNftBidsTable.bigInteger("transactionTime").notNullable()
+        commitNftBidsTable.string("transactionHash").notNullable()
+        commitNftBidsTable.string("supporterAccountAddress").notNullable()
     })
 };
 
