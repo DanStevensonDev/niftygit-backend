@@ -9,6 +9,7 @@ exports.up = function (knex) {
         commitNftOffersTable.bigInteger("transactionTime").notNullable()
         commitNftOffersTable.string("transactionHash").notNullable()
         commitNftOffersTable.string("supporterAccountAddress").notNullable()
+        commitNftOffersTable.string("supporterEmailAddress").notNullable()
     })
 };
 
