@@ -18,3 +18,9 @@ exports.fetchOffers = (committer, ref) => {
         })
         .returning("*")
 }
+
+exports.sendOffer = (offerData) => {
+    return dbConnection("commit_nft_offers")
+        .insert(offerData)
+        .returning("*")
+}

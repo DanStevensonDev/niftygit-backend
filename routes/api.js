@@ -1,5 +1,5 @@
 const apiRouter = require('express').Router()
-const offersRouter = require('./offersRouter')
+const offersRouter = require('./offers')
 
 apiRouter.use('/offers', offersRouter)
 
