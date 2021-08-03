@@ -1,6 +1,7 @@
 module.exports = [
     {
         committerUsername: "DanStevensonCO",
+        offerStatus: "Awaiting response from committer",
         commitData: {
                 "sha": "22f5719e52230c92f88db864ea98092b98737bc3",
                 "node_id": "MDY6Q29tbWl0MzM5OTc5MDc5OjIyZjU3MTllNTIyMzBjOTJmODhkYjg2NGVhOTgwOTJiOTg3MzdiYzM=",
@@ -139,6 +140,7 @@ module.exports = [
     },
     {
         committerUsername: "NiftyGit",
+        offerStatus: "Awaiting response from committer",
         commitData: {
                 "sha": "22f5719e52230c92f88db864ea98092b98737bc3",
                 "node_id": "MDY6Q29tbWl0MzM5OTc5MDc5OjIyZjU3MTllNTIyMzBjOTJmODhkYjg2NGVhOTgwOTJiOTg3MzdiYzM=",
