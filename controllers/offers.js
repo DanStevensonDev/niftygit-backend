@@ -18,7 +18,7 @@ exports.postOffer = (req, res, next) => {
 }
 
 exports.patchOffer = (req, res, next) => {
-    const offerId = req.query
+    const { offerId } = req.query
     const { offerStatus } = req.body
 
     changeOfferStatus(offerId, offerStatus).then((data) => {
