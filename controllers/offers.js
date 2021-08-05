@@ -1,4 +1,4 @@
-const {fetchOffers, sendOffer} = require('../models/offers')
+const {fetchOffers, sendOffer, changeOfferStatus} = require('../models/offers')
 
 exports.getOffers = (req, res, next) => {
     const {committer, ref} = req.query
