@@ -24,3 +24,10 @@ exports.sendOffer = (offerData) => {
         .insert(offerData)
         .returning("*")
 }
+
+exports.changeOfferStatus = (offerId, offerStatus) => {
+    return dbConnection("commit_nft_offers")
+        .select("offerId", offerId)
+        .update("offerStatus", offerStatus)
+        .returning("*")
+}

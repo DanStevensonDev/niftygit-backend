@@ -16,3 +16,15 @@ exports.postOffer = (req, res, next) => {
         return err
     })
 }
+
+exports.patchOffer = (req, res, next) => {
+    console.log(req)
+    const offerId = req.query
+    const offerStatus = req.body
+
+    changeOfferStatus(offerId, offerStatus).then((data) => {
+        res.status(200).send(data)
+    }).catch((err) => {
+        return err
+    })
+}
