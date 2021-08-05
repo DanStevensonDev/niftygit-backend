@@ -27,7 +27,8 @@ exports.sendOffer = (offerData) => {
 
 exports.changeOfferStatus = (offerId, offerStatus) => {
     return dbConnection("commit_nft_offers")
-        .select("offerId", offerId)
+        .select("*")
+        .where("offerId", offerId)
         .update("offerStatus", offerStatus)
         .returning("*")
 }
