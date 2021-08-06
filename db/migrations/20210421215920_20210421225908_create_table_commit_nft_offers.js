@@ -5,7 +5,7 @@ exports.up = function (knex) {
       commitNftOffersTable.increments("offerId").primary()
       commitNftOffersTable.string("committerUsername").notNullable()
       commitNftOffersTable.string("commitSha").notNullable()
-      commitNftOffersTable.string("offerStatus").notNullable()
+      commitNftOffersTable.integer("offerStatus").notNullable()
       commitNftOffersTable.json("commitData").notNullable()
       commitNftOffersTable.float("offerAmountInEth").notNullable()
       commitNftOffersTable.bigInteger("transactionTime").notNullable()
