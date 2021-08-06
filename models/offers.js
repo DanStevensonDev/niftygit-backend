@@ -1,6 +1,6 @@
 const dbConnection = require('../db/dbConnection')
 
-exports.fetchOffers = (committer) => {
+exports.fetchOffers = (committer, commitSha) => {
     return dbConnection("commit_nft_offers")
         .select("*")
         .modify((querySoFar) => {
