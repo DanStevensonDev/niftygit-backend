@@ -9,6 +9,12 @@ exports.fetchOffers = (committer) => {
                     .select("*")
                     .where("commit_nft_offers.committerUsername", committer)
             }
+
+            if (commitSha !== undefined) {
+                querySoFar
+                    .select("*")
+                    .where("commit_nft_offers.commitSha", commitSha)
+            }
         })
         .returning("*")
 }
