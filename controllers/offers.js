@@ -1,8 +1,8 @@
 const {fetchOffers, sendOffer, changeOfferStatus} = require('../models/offers')
 
 exports.getOffers = (req, res, next) => {
-    const {committer, sha} = req.query
-    fetchOffers(committer, sha).then((offers) => {
+    const {committer} = req.query
+    fetchOffers(committer).then((offers) => {
         res.status(200).send(offers)
     })
 }
