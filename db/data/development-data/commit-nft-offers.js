@@ -1,6 +1,7 @@
 module.exports = [
     {
         committerUsername: "DanStevensonCO",
+        commitSha: "22f5719e52230c92f88db864ea98092b98737bc3",
         offerStatus: "Awaiting response from committer",
         commitData: {
                 "sha": "22f5719e52230c92f88db864ea98092b98737bc3",
@@ -140,6 +141,7 @@ module.exports = [
     },
     {
         committerUsername: "NiftyGit",
+        commitSha: "32f5719e52230c92f88db864ea98092b98737bc3", 
         offerStatus: "Awaiting response from committer",
         commitData: {
                 "sha": "22f5719e52230c92f88db864ea98092b98737bc3",
