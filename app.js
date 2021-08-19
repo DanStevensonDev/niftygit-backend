@@ -16,10 +16,6 @@ app.use(function (req, res, next) {
   if (headers.authorization !== REACT_APP_HEADER_AUTH) {
     return res.status(401).send({ error: 'Unauthorized' });
   }
-
-  if (protocol !== "https") {
-    return res.status(403).send({ error: 'Forbidden' });
-  }
   
   next();
 })
