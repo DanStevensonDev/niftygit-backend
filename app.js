@@ -21,6 +21,14 @@ app.use(function (req, res, next) {
     return res.status(401).json({ error: 'Forbidden (unauthorized)', info: {secure, protocol, headers} });
   }
 
+  const debugInfo = {
+    secure: secure,
+    protocol: protocol,
+    headers: headers
+  }
+
+  console.log(debugInfo)
+
   next();
 })
 
