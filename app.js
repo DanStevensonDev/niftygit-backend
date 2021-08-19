@@ -13,14 +13,12 @@ const { REACT_APP_HEADER_AUTH } = process.env
 app.use(function (req, res, next) {
   const { secure, protocol, headers, hostname } = req
 
-  const testEnvVar = "test" + REACT_APP_HEADER_AUTH
-
   if (headers.authorization !== REACT_APP_HEADER_AUTH) {
-    return res.status(401).send({ error: 'Unauthorized', info: {secure, protocol, headers, hostname }, auth: REACT_APP_HEADER_AUTH });
+    return res.status(401).send({ error: 'Unauthorized' });
   }
 
   if (protocol !== "https") {
-    return res.status(403).send({ error: 'Forbidden', info: {"testEnvVar": testEnvVar, secure, protocol, headers, hostname}});
+    return res.status(403).send({ error: 'Forbidden' });
   }
   
   next();
