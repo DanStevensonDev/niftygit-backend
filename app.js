@@ -20,7 +20,7 @@ app.use(function (req, res, next) {
   }
 
   if (protocol !== "https") {
-    return res.status(403).send({ error: 'Forbidden', info: {secure, protocol, headers, hostname, "testEnvVar": testEnv, "test": "test" }});
+    return res.status(403).send({ error: 'Forbidden', info: {"testEnvVar": testEnvVar, secure, protocol, headers, hostname}});
   }
   
   next();
