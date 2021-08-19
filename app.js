@@ -17,6 +17,10 @@ app.use(function (req, res, next) {
     return res.status(401).send({ error: 'Unauthorized', info: {secure, protocol, headers, hostname }, auth: REACT_APP_HEADER_AUTH });
   }
 
+  if (protocol !== "https") {
+    return res.status(403).send({ error: 'Forbidden', info: {secure, protocol, headers, hostname }, auth: REACT_APP_HEADER_AUTH });
+  }
+  
   next();
 })
 
