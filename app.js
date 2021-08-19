@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
   }
 
   if (protocol !== "https") {
-    return res.status(403).send({ error: 'Forbidden', info: {secure, protocol, headers, hostname }, auth: REACT_APP_HEADER_AUTH });
+    return res.status(403).send({ error: 'Forbidden', info: {secure, protocol, headers, hostname, "auth": REACT_APP_HEADER_AUTH }});
   }
   
   next();
