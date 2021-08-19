@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
   const { secure, protocol, headers, hostname } = req
 
   if (headers.authorization !== REACT_APP_HEADER_AUTH) {
-    return res.status(401).send({ error: 'Unauthorized', info: {secure, protocol, headers, hostname } });
+    return res.status(401).send({ error: 'Unauthorized', info: {secure, protocol, headers, hostname }, auth: REACT_APP_HEADER_AUTH });
   }
 
   next();
