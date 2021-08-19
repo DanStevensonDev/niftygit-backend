@@ -11,10 +11,14 @@ app.use(helmet())
 const { REACT_APP_HEADER_AUTH } = process.env
 
 app.use(function (req, res, next) {
-    const {authorization, host} = req.headers
-    if (authorization !== REACT_APP_HEADER_AUTH || !req.secure) {
-        return res.status(403).json({ error: 'Forbidden' });
+    if (req.authorization !== REACT_APP_HEADER_AUTH) {
+        return res.status(403).json({ error: 'Forbidden (unauthorized)' });
     }
+  
+    if (!req.secure) {
+        return res.status(403).json({ error: 'Forbidden (unsecure)' });
+    }
+  
   next();
 })
 
